@@ -82,7 +82,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding: 0 4rem;
+    padding: 4rem;
     background-color: var(--white);
 }
 
@@ -97,6 +97,7 @@ a {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+    padding: 4rem 0;
     max-width: var(--max-width);
 }
 .container>.title {
@@ -120,6 +121,13 @@ a {
     align-items: center;
     flex: 1;
 }
+.row-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+}
 .col {
     display: flex;
     flex-direction: column;
@@ -127,14 +135,26 @@ a {
     align-items: flex-start;
     flex: 1;
 }
+.col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 4rem;
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(4px);
 }
 .navbar>.content {
     display: flex;
@@ -204,6 +224,16 @@ a {
     background: var(--black);
     border: none;
     border-radius: .25rem;
+    color: var(--white);
+    text-align: center;
+    font-size: large;
+}
+.btn-b {
+    margin: .25rem;
+    padding: 1rem;
+    background: var(--black);
+    border: none;
+    border-radius: 0 0 .25rem .25rem;
     color: var(--white);
     text-align: center;
     font-size: large;
@@ -310,17 +340,21 @@ a {
     overflow: hidden;
 }
 .input-icon>span {
-    padding: .5rem;
+    padding: .75rem;
     background: var(--black);
     border-right: 1px solid var(--gray-500);
     color: var(--white);
     font-size: 1rem;
 }
 .input-icon>.subinput {
+    width: 100%;
     margin: 0;
     padding: 0 .5rem;
     border: none;
     outline: none;
+}
+.input-icon>.subinput:focus  {
+    font-family: var(--fontBold);
 }
 .input-date {
     display: flex;
@@ -334,7 +368,7 @@ a {
     overflow: hidden;
 }
 .input-date>span {
-    padding: .5rem;
+    padding: .75rem;
     background: var(--black);
     border-right: 1px solid var(--gray-500);
     color: var(--white);
@@ -407,9 +441,15 @@ a {
     font-family: var(--font);
     font-size: 1.125rem;
 }
-.card>.img {
+.card>.desc .label {
     margin-top: .5rem;
-    height: 12rem;
+    width: 100%;
+    font-size: .75rem;
+    text-align: left;
+}
+.card>.bottom {
+    display: flex;
+    margin-top: .5rem;
     background: var(--gray-300);
     background-image: url('');
     background-size: cover;
@@ -421,4 +461,10 @@ a {
 .full {
     flex: 1;
     width: calc(100% - .5rem);
+}
+.mg-0 {
+    margin: 0;
+}
+.pd-0 {
+    padding: 0;
 }
