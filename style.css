@@ -82,8 +82,13 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding: 4rem;
+    padding: 0 4rem;
     background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
 }
 
 .container {
@@ -115,7 +120,6 @@ body {
     align-items: center;
     flex: 1;
 }
-
 .col {
     display: flex;
     flex-direction: column;
@@ -124,6 +128,57 @@ body {
     flex: 1;
 }
 
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 4rem;
+}
+.navbar>.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+}
+.navbar>.content>.logo {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    font-family: var(--fontBold);
+    font-size: 2rem;
+}
+.navbar>.content>.menu {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--fontBold);
+    font-size: 1.25rem;
+    color: var(--black);
+}
+.navbar>.content>.menu:hover a {
+    color: var(--gray-500);
+    text-align: center;
+}
+.navbar>.content>.menu>a {
+    flex: 1;
+    text-align: center;
+}
+.navbar>.content>.menu>a:hover {
+    color: var(--black);
+}
+.navbar>.content>.item {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    font-family: var(--fontBold);
+    font-size: large;
+}
 .btn {
     margin: .25rem;
     padding: .5rem 1rem;
@@ -356,7 +411,7 @@ body {
     margin-top: .5rem;
     height: 12rem;
     background: var(--gray-300);
-    background-image: url('img.png');
+    background-image: url('');
     background-size: cover;
 }
 
