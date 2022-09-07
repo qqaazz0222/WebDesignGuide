@@ -74,6 +74,15 @@
     --z-popup: 1001;
     --z-modal: 1002;
 }
+* {
+    margin:0; padding:0;
+}
+ul {
+    list-style:none;
+}
+a {
+    text-decoration:none;
+}
 
 html {
     font-family: 'dotum';
@@ -91,7 +100,6 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--black);
 }
 
 .container {
@@ -100,7 +108,7 @@ a {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    padding: 4rem 0;
+    padding: 4rem 0 0 0;
     max-width: var(--max-width);
 }
 .container>.title {
@@ -189,18 +197,17 @@ a {
     justify-content: space-around;
     font-family: var(--fontBold);
     font-size: 1.25rem;
-    color: var(--black);
 }
 .navbar>.content>.menu:hover>a {
     color: var(--gray-500);
     text-align: center;
 }
 .navbar>.content>.menu>a {
-    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1;
     text-align: center;
+    color: var(--black);
 }
 .navbar>.content>.menu>a:hover {
     color: var(--black);
@@ -274,6 +281,7 @@ a {
     border: none;
     border-radius: .25rem;
     color: white;
+    font-size: medium;
 }
 .btngroup-s {
     display: flex;
@@ -310,6 +318,7 @@ a {
 .btngroup-l>.subbtn {
     padding: 0 .5rem;
     text-align: center;
+    color: var(--white);
 }
 .btngroup>.subbtn:hover,
 .btngroup-s>.subbtn:hover,
@@ -528,6 +537,44 @@ input[id="exampleChkbox"]:checked + .chkbox[for="exampleChkbox"] {
     background: var(--gray-100);
 }
 
+.drop:after{
+    display:block; 
+    content:''; 
+    clear:both;
+}
+.drop > li{
+    position:relative; 
+    float:left; 
+    margin-right:5px;
+}
+.drop > li > a {
+    flex: 1;
+    display: block;
+    flex-direction: row;
+    justify-content: left;
+    font-family: var(--fontBold);
+    font-size: 1.25rem;
+    color: var(--black);
+}
+.drop > li:hover .dropmenu {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.drop .dropmenu{
+    display:none; 
+    position:absolute;
+    padding: 0 .5rem;
+    text-align:center;
+    background: var(--black);
+    border-radius: 100rem;
+}
+.drop .dropmenu a{
+    display:block; 
+    padding:5px; 
+    color:#fff;
+}
 
 .round {
     border-radius: 100rem;
