@@ -70,6 +70,9 @@
     --font: 'dotum';
     --fontLight: 'dotumLight';
     --fontBold: 'dotumBold';
+    --z-navbar: 1000;
+    --z-popup: 1001;
+    --z-modal: 1002;
 }
 
 html {
@@ -128,6 +131,13 @@ a {
     align-items: flex-start;
     flex: 1;
 }
+.row-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex: 1;
+}
 .col {
     display: flex;
     flex-direction: column;
@@ -155,6 +165,7 @@ a {
     height: 4rem;
     background: rgba(255, 255, 255, .3);
     backdrop-filter: blur(4px);
+    z-index: var(--z-navbar);
 }
 .navbar>.content {
     display: flex;
@@ -180,17 +191,21 @@ a {
     font-size: 1.25rem;
     color: var(--black);
 }
-.navbar>.content>.menu:hover a {
+.navbar>.content>.menu:hover>a {
     color: var(--gray-500);
     text-align: center;
 }
 .navbar>.content>.menu>a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     flex: 1;
     text-align: center;
 }
 .navbar>.content>.menu>a:hover {
     color: var(--black);
 }
+
 .navbar>.content>.item {
     flex: 1;
     display: flex;
@@ -387,6 +402,26 @@ a {
     outline: none;
     text-align: center;
 }
+input[type="checkbox"] {
+    display: block;
+}
+.chkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    background: var(--white);
+    border: 1px solid var(--gray-500);
+    border-radius: .25rem;
+}
+.chkbox:hover {
+    border: 1px solid var(--black);
+}
+input[id="exampleChkbox"]:checked + .chkbox[for="exampleChkbox"] {
+    background: var(--black);
+    border: 1px solid var(--black);
+}
 
 .card {
     display: flex;
@@ -430,6 +465,22 @@ a {
     padding: .25rem 1.5rem;
     color: var(--gray-500);
     font-family: var(--font);
+}
+.card>.error {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: .25rem 1.5rem;
+    padding: .5rem 1rem;
+    background-color: rgba(255, 0, 0, .1);
+    border: 1px solid var(--red);
+    border-radius: .25rem;
+    color: var(--red);
+}
+.card>.error>span {
+    margin-right: .5rem;
+    font-size: 1rem;
 }
 .card>.desc {
     display: flex;
