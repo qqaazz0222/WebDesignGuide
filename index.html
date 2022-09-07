@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <div class="navbar">
         <div class="content">
@@ -15,9 +17,28 @@
                 웹디자인가이드
             </div>
             <div class="menu">
-                <a href="index.html">컴포넌트</a>
-                <a href="form.html">폼</a>
-                <a href="log.html">기록</a>
+                <ul class="drop">
+                    <li>
+                        <a href="index.html">컴포넌트</a>
+                        <ul class="dropmenu">
+                            <li><a href="index.html/#button">버튼</a></li>
+                            <li><a href="#">버튼그룹</a></li>
+                            <li><a href="#">입력</a></li>
+                            <li><a href="#">카드</a></li>
+                            <li><a href="#">드롭다운</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="form.html">폼</a>
+                    </li>
+                    <li>
+                        <a href="log.html">기록</a>
+                        <ul class="dropmenu">
+                            <li><a href="#">MENU1</a></li>
+                            <li><a href="#">MENU2</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <div class="item">
                 <a class="btn-s">로그인</a>
@@ -38,7 +59,7 @@
             Button
         </div>
         <div class="desc">
-            버튼 컴포넌트입니다. 
+            버튼 컴포넌트입니다.
         </div>
         <div class="subtitle">
             기본 버튼
@@ -96,7 +117,7 @@
             Button Group
         </div>
         <div class="desc">
-            버튼 그룹 컴포넌트입니다. 
+            버튼 그룹 컴포넌트입니다.
         </div>
         <div class="subtitle">
             기본 버튼 그룹
@@ -178,7 +199,7 @@
             Input
         </div>
         <div class="desc">
-            입력 컴포넌트입니다. 
+            입력 컴포넌트입니다.
         </div>
         <div class="subtitle">
             기본 입력
@@ -291,7 +312,7 @@
             Card
         </div>
         <div class="desc">
-            카드 컴포넌트입니다. 
+            카드 컴포넌트입니다.
         </div>
         <div class="subtitle">
             기본 카드
@@ -496,7 +517,7 @@
             Table
         </div>
         <div class="desc">
-            테이블 컴포넌트입니다. 
+            테이블 컴포넌트입니다.
         </div>
         <div class="subtitle">
             기본 테이블
@@ -574,7 +595,7 @@
             Dropdown
         </div>
         <div class="desc">
-            드롭다운 컴포넌트입니다. 
+            드롭다운 컴포넌트입니다.
         </div>
         <div class="subtitle">
             네비바 드롭다운
@@ -582,24 +603,48 @@
         <div class="row">
             <ul class="drop">
                 <li>
-                  <a href="#">MENU 1</a>
-                  <ul class="dropmenu">
-                    <li><a href="#">MENU1</a></li>
-                    <li><a href="#">MENU2</a></li>
-                    <li><a href="#">MENU3</a></li>
-                  </ul>
+                    <a href="#">MENU 1</a>
+                    <ul class="dropmenu">
+                        <li><a href="#">MENU1</a></li>
+                        <li><a href="#">MENU2</a></li>
+                        <li><a href="#">MENU3</a></li>
+                    </ul>
                 </li>
                 <li>
-                  <a href="#">MENU 2</a>
+                    <a href="#">MENU 2</a>
                 </li>
                 <li>
-                  <a href="#">MENU 3</a>
-                  <ul class="dropmenu">
-                    <li><a href="#">MENU1</a></li>
-                    <li><a href="#">MENU2</a></li>
-                  </ul>
+                    <a href="#">MENU 3</a>
+                    <ul class="dropmenu">
+                        <li><a href="#">MENU1</a></li>
+                        <li><a href="#">MENU2</a></li>
+                    </ul>
                 </li>
-              </ul>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="drop">
+                <li>
+                    <a href="#">MENU 1</a>
+                    <ul class="dropmenu">
+                        <li><a href="#">버튼</a></li>
+                        <li><a href="#">버튼그룹</a></li>
+                        <li><a href="#">입력</a></li>
+                        <li><a href="#">카드</a></li>
+                        <li><a href="#">드롭다운</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MENU 2</a>
+                </li>
+                <li>
+                    <a href="#">MENU 3</a>
+                    <ul class="dropmenu">
+                        <li><a href="#">MENU1</a></li>
+                        <li><a href="#">MENU2</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
     <div id="button" class="container">
@@ -607,7 +652,7 @@
             Button
         </div>
         <div class="desc">
-            버튼 컴포넌트입니다. 
+            버튼 컴포넌트입니다.
         </div>
         <div class="subtitle">
             기본 버튼
@@ -620,7 +665,7 @@
             Button
         </div>
         <div class="desc">
-            버튼 컴포넌트입니다. 
+            버튼 컴포넌트입니다.
         </div>
         <div class="subtitle">
             기본 버튼
@@ -629,4 +674,5 @@
         </div>
     </div>
 </body>
+
 </html>

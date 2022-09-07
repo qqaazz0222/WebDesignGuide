@@ -192,24 +192,26 @@ a {
     font-size: 2rem;
 }
 .navbar>.content>.menu {
-    flex: 1;
+    flex: 2;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    width: 100%;
     font-family: var(--fontBold);
     font-size: 1.25rem;
 }
-.navbar>.content>.menu:hover>a {
+.navbar>.content>.menu:hover>ul>li>a {
     color: var(--gray-500);
     text-align: center;
 }
-.navbar>.content>.menu>a {
+.navbar>.content>.menu>ul>li>a  {
     display: flex;
     flex-direction: column;
     flex: 1;
+    padding: 0 1rem;
     text-align: center;
     color: var(--black);
 }
-.navbar>.content>.menu>a:hover {
+.navbar>.content>.menu>ul>li>a:hover {
     color: var(--black);
 }
 
@@ -558,22 +560,32 @@ input[id="exampleChkbox"]:checked + .chkbox[for="exampleChkbox"] {
 }
 .drop > li:hover .dropmenu {
     display:flex;
+}
+.drop .dropmenu{
+    display:none;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-.drop .dropmenu{
-    display:none; 
     position:absolute;
     padding: 0 .5rem;
-    text-align:center;
+    width: fit-content;
+    height: 2.5rem;
     background: var(--black);
     border-radius: 100rem;
+    text-align: center;
+    font-family: var(--font);
+    font-size: medium;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 .drop .dropmenu a{
-    display:block; 
+    display:block;
     padding:5px; 
+    min-width: 4rem;
     color:#fff;
+}
+.drop .dropmenu a:hover{
+    font-family: var(--fontBold);
 }
 
 .round {
