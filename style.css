@@ -70,6 +70,7 @@
     --font: 'dotum';
     --fontLight: 'dotumLight';
     --fontBold: 'dotumBold';
+    --z-drop:300;
     --z-navbar: 1000;
     --z-popup: 1001;
     --z-modal: 1002;
@@ -82,6 +83,7 @@ ul {
 }
 a {
     text-decoration:none;
+    color: var(--black);
 }
 
 html {
@@ -117,6 +119,7 @@ a {
     color: var(--black);
 }
 .container>.subtitle {
+    margin: 1rem 0;
     font-family: 'dotum';
     font-size: 1.25rem;
 }
@@ -184,15 +187,15 @@ a {
     max-width: 960px;
 }
 .navbar>.content>.logo {
-    flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: left;
+    width: fit-content;
     font-family: var(--fontBold);
     font-size: 2rem;
 }
 .navbar>.content>.menu {
-    flex: 2;
+    flex: 1;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -216,10 +219,10 @@ a {
 }
 
 .navbar>.content>.item {
-    flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: right;
+    width: fit-content;
     font-family: var(--fontBold);
     font-size: large;
 }
@@ -577,6 +580,7 @@ input[id="exampleChkbox"]:checked + .chkbox[for="exampleChkbox"] {
     font-size: medium;
     left: 50%;
     transform: translate(-50%, 0);
+    z-index: var(--z-drop);
 }
 .drop .dropmenu a{
     display:block;
@@ -586,6 +590,121 @@ input[id="exampleChkbox"]:checked + .chkbox[for="exampleChkbox"] {
 }
 .drop .dropmenu a:hover{
     font-family: var(--fontBold);
+}
+.tab {
+
+}
+.tab-top>.menu {
+    display: flex;
+    flex-direction: row;
+}
+.tab-top>.menu>li {
+    padding: .5rem 1.5rem;
+    border-bottom: 1px solid var(--gray-500);
+    font-family: var(--font);
+    color: var(--gray-500);
+}
+.tab-top>.menu>li:last-child {
+    flex: 1;
+}
+.tab-top>.menu>.sel {
+    border: 1px solid var(--gray-500);
+    border-bottom: none;
+    border-radius: .25rem .25rem 0 0;
+    font-family: var(--fontBold);
+    color: var(--black);
+}
+.tab-top>.content {
+    padding: 1.5rem;
+    border: 1px solid var(--gray-500);
+    border-top: none;
+    border-radius: 0 0 .25rem .25rem;
+}
+.tab-bottom>.menu {
+    display: flex;
+    flex-direction: row;
+}
+.tab-bottom>.menu>li {
+    padding: .5rem 1.5rem;
+    border-top: 1px solid var(--gray-500);
+    font-family: var(--font);
+    color: var(--gray-500);
+}
+.tab-bottom>.menu>li:last-child {
+    flex: 1;
+}
+.tab-bottom>.menu>.sel {
+    border: 1px solid var(--gray-500);
+    border-top: none;
+    border-radius: 0 0 .25rem .25rem;
+    font-family: var(--fontBold);
+    color: var(--black);
+}
+.tab-bottom>.content {
+    padding: 1.5rem;
+    border: 1px solid var(--gray-500);
+    border-bottom: none;
+    border-radius: .25rem .25rem 0 0;
+}
+.tab-left {
+    display: flex;
+    flex-direction: row;
+}
+.tab-left>.menu {
+    display: flex;
+    flex-direction: column;
+}
+.tab-left>.menu>li {
+    padding: .5rem 1.5rem;
+    border-right: 1px solid var(--gray-500);
+    font-family: var(--font);
+    color: var(--gray-500);
+}
+.tab-left>.menu>li:last-child {
+    flex: 1;
+}
+.tab-left>.menu>.sel {
+    border: 1px solid var(--gray-500);
+    border-right: none;
+    border-radius: .25rem 0 0 .25rem;
+    font-family: var(--fontBold);
+    color: var(--black);
+}
+.tab-left>.content {
+    padding: 1.5rem;
+    border: 1px solid var(--gray-500);
+    border-left: none;
+    border-radius: 0 .25rem .25rem 0;
+}
+.tab-right {
+    display: flex;
+    flex-direction: row;
+}
+.tab-right>.menu {
+    display: flex;
+    flex-direction: column;
+}
+.tab-right>.menu>li {
+    padding: .5rem 1.5rem;
+    border-left: 1px solid var(--gray-500);
+    font-family: var(--font);
+    color: var(--gray-500);
+}
+.tab-right>.menu>li:last-child {
+    flex: 1;
+}
+.tab-right>.menu>.sel {
+    border: 1px solid var(--gray-500);
+    border-left: none;
+    border-radius: 0 .25rem .25rem 0;
+    font-family: var(--fontBold);
+    color: var(--black);
+}
+.tab-right>.content {
+    padding: 1.5rem;
+    border: 1px solid var(--gray-500);
+    border-right: none;
+    border-radius: .25rem 0 0 .25rem;
 }
 
 .round {
