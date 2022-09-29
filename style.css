@@ -480,6 +480,25 @@ input[id="exampleChkbox"]:checked + .chkbox[for="exampleChkbox"] {
     color: var(--gray-500);
     font-family: var(--font);
 }
+.card>.tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .25rem 1.5rem;
+    font-size: 2rem;
+    font-family: var(--fontBold);
+}
+.card>.tab>.item {
+    width: 50%;
+    text-align: center;
+    border-bottom: .125rem solid var(--white);
+}
+.card>.tab>.item:hover {
+    border-bottom: .125rem solid var(--black);
+}
+.card>.tab>.sel {
+    border-bottom: .125rem solid var(--black);
+}
 .card>.error {
     display: flex;
     flex-direction: row;
