@@ -6,49 +6,8 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="content">
-            <div class="logo">
-                웹디자인가이드
-            </div>
-            <div class="menu">
-                <ul class="drop">
-                    <li>
-                        <a href="index.html">컴포넌트</a>
-                        <ul class="dropmenu">
-                            <li><a href="index.html/#button">버튼</a></li>
-                            <li><a href="#">버튼그룹</a></li>
-                            <li><a href="#">입력</a></li>
-                            <li><a href="#">카드</a></li>
-                            <li><a href="#">드롭다운</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="form.html">폼</a>
-                    </li>
-                    <li>
-                        <a href="log.html">기록</a>
-                        <ul class="dropmenu">
-                            <li><a href="#">MENU1</a></li>
-                            <li><a href="#">MENU2</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="item">
-                <a class="btn-s">로그인</a>
-                <a class="btn-s">회원가입</a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <a href="#button" class="btn round">Button</a>
-            <a href="#buttongroup" class="btn round">ButtonGroup</a>
-            <a href="#input" class="btn round">Input</a>
-            <a href="#card" class="btn round">Card</a>
-        </div>
-    </div>
+    <%- include('navbar')%>
+    <%- include('sidebar')%>
     <%- include('components/button') %>
     <div id="buttongroup" class="container">
         <div class="title">

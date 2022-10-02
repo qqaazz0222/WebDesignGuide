@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'dotum';
-    src: url('font/dotum.ttf') format('truetype');
+    src: url('../font/dotum.ttf') format('truetype');
 }
 @font-face {
     font-family: 'dotumLight';
-    src: url('font/dotumLight.ttf') format('truetype');
+    src: url('../font/dotumLight.ttf') format('truetype');
 }
 @font-face {
     font-family: 'dotumBold';
-    src: url('font/dotumBold.ttf') format('truetype');
+    src: url('../font/dotumBold.ttf') format('truetype');
 }
 @font-face {
     font-family: 'batang';
-    src: url('font/batang.ttf') format('truetype');
+    src: url('../font/batang.ttf') format('truetype');
 }
 @font-face {
     font-family: 'batangLight';
-    src: url('font/batangLight.ttf') format('truetype');
+    src: url('../font/batangLight.ttf') format('truetype');
 }
 @font-face {
     font-family: 'batangBold';
-    src: url('font/batangBold.ttf') format('truetype');
+    src: url('../font/batangBold.ttf') format('truetype');
 }
 
 :root {
@@ -72,8 +72,9 @@
     --fontBold: 'dotumBold';
     --z-drop:300;
     --z-navbar: 1000;
-    --z-popup: 1001;
-    --z-modal: 1002;
+    --z-sidebar: 1001;
+    --z-popup: 1002;
+    --z-modal: 1003;
 }
 * {
     margin:0; padding:0;
@@ -744,6 +745,99 @@ input[id="exampleChkbox"]:checked + .chkbox[for="exampleChkbox"] {
     border-right: none;
     border-radius: .25rem 0 0 .25rem;
 }
+
+input[id="sidebar"] {
+    display: none;
+}
+input[id="sidebar"] + ul {
+    display:block;
+    position:fixed;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    transition:all .35s;
+    text-align:right;
+}
+input[id="sidebar"] + ul > li {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: -1px;
+}
+input[id="sidebar"] + ul > li > a {
+    display: block;
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    transition: all .35s;
+}
+input[id="sidebar"] + ul > li > label {
+    display: block;
+    cursor: pointer;
+    width: auto;
+    height: 50px;
+    background: var(--black);
+}
+input[id="sidebar"]+ul>li:nth-child(1) label span {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    border-radius: 30px;
+    background: var(--white);
+    transition: all .35s;
+}
+input[id="sidebar"]+ul>li:nth-child(1) label span:nth-child(1) {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+input[id="sidebar"]+ul>li:nth-child(1) label span:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input[id="sidebar"]+ul>li:nth-child(1) label span:nth-child(3) {
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+input[id="sidebar"]:checked+ul {
+    z-index: var(--z-sidebar);
+    right: 300px;
+}
+input[id="sidebar"]:checked+ul>li:nth-child(1) label {
+    z-index: var(--z-sidebar);
+    right: 300px;
+}
+input[id="sidebar"]:checked+ul>li:nth-child(1) label span:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+input[id="sidebar"]:checked+ul>li:nth-child(1) label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="sidebar"]:checked+ul>li:nth-child(1) label span:nth-child(3) {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+    width: 300px;
+    height: 100%;
+    background: var(--black);
+    color: var(--white);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: var(--z-sidebar);
+    transition: all .35s;
+}
+
+input[id="sidebar"]:checked + ul + div {right:0;}
 
 .round {
     border-radius: 100rem;
